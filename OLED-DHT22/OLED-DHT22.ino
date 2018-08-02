@@ -11,7 +11,7 @@ SSD1306 display(0x3C, 4, 15);           //引脚4，15是绑定在Kit 32的主�
 #define DHTPIN 5     // GPIO 5
 #define DHTTYPE DHT22   // DHT 22  (AM2302)
 DHT dht(DHTPIN, DHTTYPE); // Initialize DHT sensor for normal 16mhz Arduino
-int chk;
+//int chk;
 float hum;  //Stores humidity value
 float temp; //Stores temperature value
 
@@ -25,7 +25,7 @@ void setupOLED()
   digitalWrite(RST_OLED, HIGH);       // while OLED is running, must set D16 in high
   /* OLED 初始設定 */
   display.init();
-  display.flipScreenVertically();           // 倒过来显示内容
+  display.flipScreenVertically();           // 螢幕翻轉
   display.setFont(ArialMT_Plain_10);        // 設定 OLED 字體大小
   display.setTextAlignment(TEXT_ALIGN_LEFT);// 設定 OLED 顯示對其方式
   display.clear();
