@@ -56,7 +56,7 @@ void loop()
     Serial.print(" %");
     //Serial.println(" Celsius");
     Serial.println("");
-    delay(1000); //Delay 2 sec.
+    delay(5000); //Delay 2 sec.
 
     String stringtemp =  String(dht.readTemperature());// 把字串常數轉換成 String 物件
     String stringhum =  String(dht.readHumidity()) + "%";

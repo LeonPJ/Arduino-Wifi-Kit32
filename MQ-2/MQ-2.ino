@@ -100,7 +100,7 @@ Remarks: The sensor and the load resistor forms a voltage divider. Given the vol
 **********************************************************************************/ 
 float MQResistanceCalculation(int raw_adc)
 {
-  return ( ((float)RL_VALUE*(1023-raw_adc)/raw_adc));
+  return ( ((float)RL_VALUE*(4095-raw_adc)/raw_adc));
 }
  
 /*************************** MQCalibration **************************************

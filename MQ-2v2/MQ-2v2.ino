@@ -10,7 +10,7 @@ void loop() {
     int sensorValue = analogRead(A0);
     int R0;
     int LPG;
-    sensor_volt = (float)sensorValue / 1024 * 5.0;
+    sensor_volt = (float)sensorValue / 4095 * 5.0;
     RS_gas = (5.0 - sensor_volt) / sensor_volt; // omit *RL
     R0 = 2;
     ratio = R0/RS_gas;  // ratio = RS/R0
@@ -19,7 +19,7 @@ void loop() {
     
     if(LPG <= 400 && LPG >= 0){
       Serial.print("Safe");
-      Serial.print(LPG);
+      //Serial.print(LPG);
       Serial.println("");
       delay(1000);
       }else if(LPG > 400 && LPG < 10000){
@@ -29,7 +29,7 @@ void loop() {
         delay(1000);
         }else{
           Serial.println("超過可量測");
-          Serial.print(LPG);
+          //Serial.print(LPG);
           Serial.println("");
           delay(1000);
           }
