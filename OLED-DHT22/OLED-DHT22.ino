@@ -8,7 +8,7 @@
 #define OLED_UPDATE_INTERVAL 500        //OLED屏幕刷新间隔ms
 SSD1306 display(0x3C, 4, 15);           //引脚4，15是绑定在Kit 32的主板上的，不能做其它用
 
-#define DHTPIN 5     // GPIO 5
+#define DHTPIN 13     // GPIO 5
 #define DHTTYPE DHT22   // DHT 22  (AM2302)
 DHT dht(DHTPIN, DHTTYPE); // Initialize DHT sensor for normal 16mhz Arduino
 //int chk;
